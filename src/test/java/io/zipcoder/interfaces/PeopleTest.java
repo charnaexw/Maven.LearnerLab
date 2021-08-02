@@ -18,7 +18,7 @@ public class PeopleTest {
         Person blin = new Person(givenid, givenName);
         int expected=1;
         //when
-        People people=new People();
+        People<Person> people=new People<Person>();
         people.addPerson(blin);
         int actual = (int) people.count(personList);
         //then
@@ -33,7 +33,7 @@ public class PeopleTest {
         Person blin = new Person(givenid, givenName);
         int expected=0;
         //when
-        People people=new People();
+        People<Person> people=new People<Person>();
         people.addPerson(blin);
         people.remove(blin);
         int actual = (int) people.count(personList);
@@ -48,7 +48,7 @@ public class PeopleTest {
         Person blin = new Person(givenid, givenName);
 
         //when
-        People people=new People();
+        People<Person> people=new People<Person>();
         people.addPerson(blin);
         Person actual=people.findById(givenid);
 
